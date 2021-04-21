@@ -1,0 +1,20 @@
+.dashboard-component {
+  padding: 20px;
+  .add-user {
+    padding-right: 20px;
+    text-align: right;
+    margin-bottom: 16px;
+  }
+  .container {
+    display: flex;
+    // justify-content: space-between;
+    flex-wrap: wrap;
+    .card {
+      width: 30%;
+      margin-bottom: 3em;
+      width: 30%;
+      margin-left: 1.5%;
+      margin-right: 1.8%;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+<div class="dashboard-component">
+  <div class="add-user">
+    <p-button (click)="displayAddUserModal = 1" label="Add User"></p-button>
+  </div>
+
+  <div class="container">
+    <ng-container *ngFor="let x of userDetails">
+      <div class="card">
+        <app-card
+          (addTaskClickEvent)="addTaskClickEventCatchFn($event)"
+          (closeIconlickedEvent)="closeIconClickedEventCatchFn($event)"
+          [userId]="x.userId"
+          [header]="x.name"
+          [content]="x.tasksList"
+        ></app-card>
+      </div>
+    </ng-container>
+  </div>
+</div>
+<app-add-user
+  (cancelClickedEvent)="cancelClickedEventCatchFn($event)"
+  [displayAddUserModal]="displayAddUserModal"
+  (confirmClickedEvent)="confirmClickedEventCatchFn($event)"
+>
+</app-add-user>
+
+<app-add-task
+  (cancelClickedEvent)="cancelClickedEventCatchFn($event, 'Task')"
+  [displayAddTaskModal]="displayAddTaskModal"
+  (confirmClickedEvent)="confirmClickedEventCatchFn($event, 'Task')"
+>
+</app-add-task>

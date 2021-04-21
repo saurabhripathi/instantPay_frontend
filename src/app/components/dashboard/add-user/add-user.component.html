@@ -1,0 +1,29 @@
+<p-dialog
+  [focusOnShow]="true"
+  [closable] = "true"
+  (onHide)="resetPreviewModal()"
+  [header]="'Add New User'"
+  [(visible)]="displayAddUserModal"
+  [modal]="true"
+  [style]="{ width: '35vw' }"
+  [baseZIndex]="100"
+  [draggable]="true"
+  [resizable]="false"
+  [closeOnEscape]="true"
+>
+  <div class="content">
+    <div class="user-input">
+      <label>Username:</label>
+      <input id="float-input"  [(ngModel)]= "value" type="text" pInputText />
+    </div>
+
+    <div class="footer">
+      <div class="button-wrapper">
+        <button pButton type="button"  [disabled] = "!value" (click) = "addUserFn()" label="Confirm"></button>
+      </div>
+      <div class="button-wrapper">
+        <button pButton type="button" (click) = "closeModalFn()" label="Cancel"></button>
+      </div>
+    </div>
+  </div>
+</p-dialog>

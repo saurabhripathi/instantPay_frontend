@@ -1,0 +1,61 @@
+::ng-deep p-dialog {
+    .ui-dialog-visible {
+      align-items: baseline;
+      padding-top: 25%;
+    }
+    .ui-dialog {
+      background: #ffffff;
+      box-shadow: 0 5px 10px #00171f29;
+      border-radius: 4px;
+      overflow: hidden;
+  
+      .ui-dialog-titlebar {
+        background: #ffffff;
+        .icon {
+          font-size: 12px;
+        }
+      }
+  
+      .ui-dialog-content {
+        padding: 0;
+        .content-wrapper {
+          margin: 1rem;
+        }
+        .footer {
+          display: flex;
+          justify-content: flex-end;
+          border-top: 1px solid #c9cacb;
+          padding: 1rem;
+          .button-wrapper:first-child {
+            margin-right: 20px;
+          };
+         
+        }
+      }
+    }
+  }
+  .content {
+    .user-input {
+      label {
+        margin-right: 6px;
+        margin-bottom: 2px;
+      }
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      flex-wrap: wrap;
+      input {
+        width: 100%;
+      }
+    }
+    
+  
+    ::ng-deep app-input-field-rf {
+      .input-field-rf-component {
+        .text {
+          margin-left: 0px;
+        }
+      }
+    }
+  }
+  
